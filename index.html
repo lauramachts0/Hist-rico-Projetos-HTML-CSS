@@ -1,128 +1,331 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RPG Game</title>
-  <style>
-    
-    body {
-      font-family: Arial, sans-serif;
-    }
-    .character {
-      border: 1px solid #ccc;
-      padding: 10px;
-      margin-bottom: 10px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Laura Schneider</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+        </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+        </script>
+
+    <script src="https://kit.fontawesome.com/f0e17cbf2f.js" crossorigin="anonymous"></script>
+    <style>
+        p {
+            font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+        .navbar-brand{
+            font-size: 33px;
+            font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+        me{
+            height: 50%; 
+            width: auto;
+        }
+        .foto-perfil {
+            height: 100%; 
+            width: auto;
+            width: 300px;
+            max-width: auto;
+            border-radius: 100%;
+        }
+
+        .icones {
+            padding-left: 5px;
+        }
+
+        .titulosBrancos {
+            text-decoration: underline;
+            text-underline-position: under;
+            padding-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: white;
+        }
+
+        .titulosVerdes {
+            text-decoration: underline;
+            text-underline-position: under;
+            padding-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #18bc9c
+        }
+
+        .paragrafoBrancos {
+            color: white !important;
+        }
+
+
+        .jumbotron {
+            margin-bottom: 0px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        p {
+            color: black !important;
+        }
+
+        .corPrimaria {
+            background-color: #1d4d5c;
+            background: linear-gradient(120deg, #408ba1, #0f3944);
+        }
+        h4{
+            color: rgb(236, 236, 236);
+            margin-left: 4;
+        }
+        .itemMenu {
+            color: white;
+        }
+
+        .competencias-list {
+            font-size: larger;
+            text-align: left;
+            margin-left: 0;
+        }
+        .competencia-pontuacao {
+            margin-right: 5px; 
+        }
+    </style>
 </head>
+<!--HOME-->
 <body>
-  <h1>RPG Game</h1>
+    <nav class="navbar navbar-expand-md navbar-light" style="background-color:rgb(32, 48, 65)">
+        <a class="navbar-brand" href="#" style=color:white>Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04"
+            aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-  <div class="character" id="player">
-    <h2>Player</h2>
-    <p><strong>Name:</strong> <span id="player-name"></span></p>
-    <p><strong>Health:</strong> <span id="player-health"></span></p>
-    <p><strong>Strength:</strong> <span id="player-strength"></span></p>
-    <h3>Inventory</h3>
-    <ul id="player-inventory"></ul>
-  </div>
+        <div class="collapse navbar-collapse" id="navbarsExample04">
+            <ul class="navbar-nav mr-auto">
 
-  <div class="character" id="enemy">
-    <h2>Enemy</h2>
-    <p><strong>Name:</strong> <span id="enemy-name"></span></p>
-    <p><strong>Health:</strong> <span id="enemy-health"></span></p>
-    <p><strong>Strength:</strong> <span id="enemy-strength"></span></p>
-  </div>
+            </ul>
+            <ul class="navbar-nav">
+                <li>
+                    <a href="#projetos" class="nav-link" style=color:white> Projetos</a>
+                </li>
+                <li>
+                    <a href="#sobre-mim" class="nav-link" style=color:white>Sobre mim</a>
+                </li>
+                <li>
+                    <a href="#depoimentos" class="nav-link" style=color:white>Depoimentos</a>
+                </li>
+                <li>
+                    <a href="#competencias" class="nav-link" style=color:white>Competências</a>
+                </li>
+                <li>
+                    <a href="#contato" class="nav-link" style=color:white>Contato</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section class="jumbotron text-center corPrimaria">
+        <div class="contaner">
+            <img src="me.png" class="foto-perfil" alt="Responsive image">
+            <h5 class="jumbotron-heading" style="color: white;text-transform: uppercase;"><br>Laura Schneider</h5>
+            <p class="lead" style="color:white !important;">Software Developer - Student
+            </p>
+            <p>
+            <a href="#contato" class="btn btn-dark my-2">Contato</a>
+            </p>
+            <a href="https://github.com/lauramachts0" target="_blank"><i style="color:white" class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/laura-schneider-1bab1b2ba/" target="_blank"><i style="color:white" class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/_lauramachts/" target="_blank"><i style="color:white" class="fab fa-instagram"></i></a>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+    </section>
+     <!-- Projects -->
+     <section class="projetos">
+        <div class="album py-5 bg-light " id="projetos">
+           <div class="container">
+               <h2 class="text-center jumbotron-heading titulosVerdes">Projetos</h2>
+               <div class="row">
+                   <div class="col-md-6">
+                       <div class="card mb-4 box-shadow">
+                           <img class="card-img-top"
+                           data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                           alt="Thumbnail [100%x225]" src="projeto1.png" data-holder-rendered="true"
+                           style="height: 225px; width: 100%a;max-width: 100%; display: block;">
+                           <div class="card-body">
+                               <p class="card-text">Esse portfolio é um projeto que eu desenvolvi usando as tecnologias A, B.
+                               </p>
+                               <ul>
+                                   <li>HTML</li>
+                                   <li>CSS</li>
+                                   <li>Javascript</li>
+                               </ul>
+                               <div class="d-flex justify-content-between align-items-center">
+                                   <div class="btn-group">
+                                       <a href="https://github.com/lauramachts0/Hist-rico-Projetos-HTML-CSS" target="_blank" class="btn btn-sm btn-outline-success">Ver Projeto</a>
+                                       <a href="https://github.com/lauramachts0/Hist-rico-Projetos-HTML-CSS/blob/main/index.html" target="_blank" class="btn btn-sm btn-outline-primary">Ver Código</a>
+                                   </div>
+                                   <small class="text-muted">Projeto Web</small>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-md-6">
+                       <div class="card mb-4 box-shadow">
+                           <img class="card-img-top"
+                               data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                               alt="Thumbnail [100%x225]" src="projeto2.png" data-holder-rendered="true"
+                               style="height: 225px; width: 100%; display: block;">
+                           <div class="card-body">
+                               <p class="card-text">Esse é um futuro projeto(calculadora) que está em desenvolvimento usando as tecnologias A, B, C e D.
+                               </p>
+                               <ul>
+                                   <li>HTML</li>
+                                   <li>CSS</li>
+                                   <li>Python</li>
+                                   <li>Javascript</li>
+                                   <li>C#</li>
+                               </ul>
+                               <div class="d-flex justify-content-between align-items-center">
+                                   <div class="btn-group">
+                                       <a href="https://github.com/" target="_blank" class="btn btn-sm btn-outline-success">Ver Projeto</a>
+                                       <a href="https://github.com/" target="_blank" class="btn btn-sm btn-outline-primary">Ver Código</a>
+                                   </div>
+                                   <small class="text-muted">Projeto Mobile</small>
+                               </div>                            
+                                   <small class="text-muted">Projeto Mobile</small>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+       </section>
+    <!--Descrição-->
+    <section class="jumbotron text-center corPrimaria" id="sobre-mim">
+        <div class="container">
+            <h2 class="jumbotron-heading titulosBrancos">Sobre mim</h2>
+            <h4>PT-BR</h4>
+            <br>
+            <p class="lead paragrafoBrancos">Olá! Eu sou a Laura, tenho 18 anos e sou natural de Porto Alegre (RS), e atualmente estou cursando Sistemas de Informação na Universidade Franciscana (UFN), em Santa Maria. Passei no vestibular aos 16 anos, e desde então tenho mergulhado de cabeça no universo da tecnologia. Estou imersa em uma jornada de descobertas e aprendizados. Desde antes de ingressar na UFN, venho desenvolvendo minhas habilidades de programação e criando alguns projetos, incluindo este portfolio que você está lendo agora. 
+                Tenho grandes metas a serem alcançadas, sendo a principal delas ingressar na Aeronáutica. Sou movida pela curiosidade e pelo desejo de aprendizado, sempre pronta para abraçar novas oportunidades que surgirem no meu caminho.
+                Além disso, minha facilidade de aprendizado aliada a uma boa comunicação interpessoal me tornam uma pessoa pró-ativa e colaborativa, capaz de trabalhar em equipe de forma eficaz. Estou constantemente buscando desenvolvimento pessoal e profissional, e acredito que cada desafio enfrentado é uma oportunidade de crescimento.
+                </p>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+        </div>
+        <div class="container">
+            <h2 class="jumbotron-heading titulosBrancos">about me</h2>
+            <h4>ENG</h4>
+            <br>
+            <p class="lead paragrafoBrancos">Hello! I'm Laura, I'm 18 years old and I'm from Porto Alegre (RS), and I'm currently studying Information Systems at the Franciscan University (UFN), in Santa Maria. I passed the entrance exam when I was 16, and since then I have immersed myself in the world of technology. I am immersed in a journey of discovery and learning. Since before I started college, I've been developing my programming skills and creating a few projects, including this portfolio you're reading now.
+                I have big goals to achieve, the main one being joining the Air Force. I am driven by curiosity and the desire to learn, always ready to embrace new opportunities that come my way.
+                Furthermore, my ease of learning combined with good interpersonal communication make me a proactive and collaborative person, capable of working effectively in a team. I am constantly seeking personal and professional development, and I believe that each challenge faced is an opportunity for growth.
+            </p>
+            <br>
+            <br>
+    <!--Depoimentos-->
+    </section>
+    <section Id="depoimentos">
+        <div class="album py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center jumbotron-heading titulosVerdes">Depoimentos</h2>
+                <blockquote class="blockquote text-center">
+                    <p class="mb-0">É uma profissional que tem um futuro muito promissor pela frente! Com um foco enorme em suas tarefas diárias, alem da grande dedicação nas disciplinas.</p>
+                    <footer class="blockquote-footer">Direção<cite title="Source Title"> UFN</cite>
+                    </footer>
+                </blockquote>
+                <br>
+                <br>
+                <blockquote class="blockquote text-center">
+                    <p class="mb-0">Super focada, dedicada, pontual com seus compromissos.
+                        Interessada e super empolgada na área em que atua e nas demais, o que a torna uma pessoa
+                        pró-ativa e altamente eficiente.</p>
+                    <footer class="blockquote-footer">Analista de Sistemas <cite title="Source Title">UFN</cite>
+                    </footer>
+                </blockquote>
+                <br>
+            </div>
+        </div>
+    </section>
+ <!-- Competências -->
+ <section id="competencias">
+    <div class="container">
+        <h2 class="text-center jumbotron-heading titulosVerdes"><br>Competências Dev</h2>
+        <ul class="list-unstyled competencias-list">
+            <li><span class="competencia-pontuacao">•</span> Desenvolvimento Front-end</li>
+            <li><span class="competencia-pontuacao">•</span> HTML</li>
+            <li><span class="competencia-pontuacao">•</span> CSS</li>
+            <li><span class="competencia-pontuacao">•</span> Bootstrap</li>
+            <li><span class="competencia-pontuacao">•</span> Javascript</li>
+            <li><span class="competencia-pontuacao">•</span> Python</li>
+            <li><span class="competencia-pontuacao">•</span> C#</li>
+            <li><span class="competencia-pontuacao">•</span> Scrum</li>
+            <li><span class="competencia-pontuacao">•</span> SQL</li>
+            <li><span class="competencia-pontuacao">•</span> Banco de Dados</li>
+        </ul>
+        <br>
+        <br>
+        <br>
+    </div>
+<!--contato-->
+</section>
+    <section Id="contato" class="corPrimaria">
+        <div class="corPrimaria">
+            <div class="container-fluid">
+                <h3 style="padding-top:90px;" class="text-center titulosBrancos">Disponível para oportunidades</h3>
+                <h4 style="padding-bottom:90px;margin-bottom: 0px;color:white;" class="text-center"><a
+                        href="mailto:lauramachts0@gmail.com">lauramachts0@gmail.com👈</a></h4>
+            </div>
+        </div>
+    </section>
 
-  <button onclick="startBattle()">Start Battle</button>
+    <footer class="text-center" style="background-color:#2c3e50;padding:0px; margin:0px">
+        <p style="margin:0px;padding-top:15px;padding-bottom:15px;color:white !important">Copyright 2020 - 2023
+            DevAprender®
+        </p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+   
+            $(".fab").hover(function () {
+                $(this).css("transform", "scale(1.2)");
+            }, function () {
+                $(this).css("transform", "scale(1)");
+            });
 
-  <script>
-    // Definição da classe Character (personagem)
-    class Character {
-      constructor(name, health, strength) {
-        this.name = name;
-        this.health = health;
-        this.strength = strength;
-      }
-
-      // Método para atacar outro personagem
-      attack(target) {
-        console.log(`${this.name} attacks ${target.name}!`);
-        const damage = Math.floor(Math.random() * this.strength) + 1;
-        target.takeDamage(damage);
-      }
-
-      // Método para receber dano
-      takeDamage(damage) {
-        console.log(`${this.name} takes ${damage} damage!`);
-        this.health -= damage;
-        if (this.health <= 0) {
-          console.log(`${this.name} has been defeated!`);
-        }
-      }
-    }
-
-    // Definição da classe Player (jogador), que herda de Character
-    class Player extends Character {
-      constructor(name, health, strength) {
-        super(name, health, strength);
-        this.inventory = [];
-      }
-
-      // Método para adicionar um item ao inventário do jogador
-      addItem(item) {
-        this.inventory.push(item);
-        console.log(`${this.name} obtained the item ${item}!`);
-      }
-    }
-
-    // Definição da classe Enemy (inimigo), que herda de Character
-    class Enemy extends Character {
-      constructor(name, health, strength) {
-        super(name, health, strength);
-      }
-    }
-
-    // Função para simular uma batalha entre o jogador e um inimigo
-    function battle(player, enemy) {
-      console.log(`A battle has begun! ${player.name} vs ${enemy.name}`);
-
-      while (player.health > 0 && enemy.health > 0) {
-        // Player attacks first
-        player.attack(enemy);
-        if (enemy.health <= 0) {
-          // Enemy defeated
-          console.log(`${enemy.name} has been defeated!`);
-          break;
-        }
-
-        // Enemy counter-attacks
-        enemy.attack(player);
-        if (player.health <= 0) {
-          // Player defeated
-          console.log(`${player.name} has been defeated!`);
-          break;
-        }
-      }
-    }
-
-    //start the battle
-    function startBattle() {
-      const player = new Player("Hero", 100, 20);
-      const enemy = new Enemy("Goblin", 50, 10);
-      battle(player, enemy);
-      
-      //Display player info
-      document.getElementById('player-name').textContent = player.name;
-      document.getElementById('player-health').textContent = player.health;
-      document.getElementById('player-strength').textContent = player.strength;
-
-      //Display enemy info
-      document.getElementById('enemy-name').textContent = enemy.name;
-      document.getElementById('enemy-health').textContent = enemy.health;
-      document.getElementById('enemy-strength').textContent = enemy.strength;
-    }
-  </script>
+          
+            $(".fab").click(function () {
+                $(this).animate({ rotation: 360 }, {
+                    duration: 1000,
+                    step: function (now) {
+                        $(this).css({ transform: 'rotate(' + now + 'deg)' });
+                    }
+                });
+            });
+            $(".fab").css("font-size", "260%");
+        });
+    </script>
 </body>
-</html>
+
+
