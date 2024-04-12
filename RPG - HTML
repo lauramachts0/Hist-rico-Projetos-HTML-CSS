@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RPG Game</title>
+  <style>
+    /* Estilos simples para melhorar a apresentação */
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .character {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>RPG Game</h1>
+
+  <div class="character" id="player">
+    <h2>Player</h2>
+    <p><strong>Name:</strong> <span id="player-name"></span></p>
+    <p><strong>Health:</strong> <span id="player-health"></span></p>
+    <p><strong>Strength:</strong> <span id="player-strength"></span></p>
+    <h3>Inventory</h3>
+    <ul id="player-inventory"></ul>
+  </div>
+
+  <div class="character" id="enemy">
+    <h2>Enemy</h2>
+    <p><strong>Name:</strong> <span id="enemy-name"></span></p>
+    <p><strong>Health:</strong> <span id="enemy-health"></span></p>
+    <p><strong>Strength:</strong> <span id="enemy-strength"></span></p>
+  </div>
+
+  <button onclick="startBattle()">Start Battle</button>
+
+  <script>
+    // Definição da classe Character (personagem)
+    class Character {
+      constructor(name, health, strength) {
+        this.name = name;
+        this.health = health;
+        this.strength = strength;
+      }
+
+      // Método para atacar outro personagem
+      attack(target) {
+        console.log(`${this.name} attacks ${target.name}!`);
+        const damage = Math.floor(Math.random() * this.strength) + 1;
+        target.takeDamage(damage);
+      }
+
+      // Método para receber dano
+      takeDamage(damage) {
+        console.log(`${this.name} takes ${damage} damage!`);
+        this.health -= damage;
+        if (this.health <= 0) {
+          console.log(`${this.name} has been defeated!`);
+        }
+      }
+    }
+
+    // Definição da classe Player (jogador), que herda de Character
+    class Player extends Character {
+      constructor(name, health, strength) {
+        super(name, health, strength);
+        this.inventory = [];
+      }
+
+      // Método para adicionar um item ao inventário do jogador
+      addItem(item) {
+        this.inventory.push(item);
+        console.log(`${this.name} obtained the item ${item}!`);
+      }
+    }
+
+    // Definição da classe Enemy (inimigo), que herda de Character
+    class Enemy extends Character {
+      constructor(name, health, strength) {
+        super(name, health, strength);
+      }
+    }
+
+    // Função para simular uma batalha entre o jogador e um inimigo
+    function battle(player, enemy) {
+      console.log(`A battle has begun! ${player.name} vs ${enemy.name}`);
+
+      while (player.health > 0 && enemy.health > 0) {
+        // Player attacks first
+        player.attack(enemy);
+        if (enemy.health <= 0) {
+          // Enemy defeated
+          console.log(`${enemy.name} has been defeated!`);
+          break;
+        }
+
+        // Enemy counter-attacks
+        enemy.attack(player);
+        if (player.health <= 0) {
+          // Player defeated
+          console.log(`${player.name} has been defeated!`);
+          break;
+        }
+      }
+    }
+
+    // Function to start the battle
+    function startBattle() {
+      const player = new Player("Hero", 100, 20);
+      const enemy = new Enemy("Goblin", 50, 10);
+      battle(player, enemy);
+      
+      // Display player info
+      document.getElementById('player-name').textContent = player.name;
+      document.getElementById('player-health').textContent = player.health;
+      document.getElementById('player-strength').textContent = player.strength;
+
+      // Display enemy info
+      document.getElementById('enemy-name').textContent = enemy.name;
+      document.getElementById('enemy-health').textContent = enemy.health;
+      document.getElementById('enemy-strength').textContent = enemy.strength;
+    }
+  </script>
+</body>
+</html>
