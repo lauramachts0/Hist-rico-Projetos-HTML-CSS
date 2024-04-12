@@ -1,0 +1,64 @@
+/* corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* contêiner dos personagens */
+  .character {
+    border: 2px solid #333;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 200px;
+  }
+  
+ 
+  .character h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  
+  .character p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #666;
+  }
+  
+ /*itens do inventário */
+  .character ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .character ul li {
+    font-size: 14px;
+    color: #999;
+  }
+  
+  /* botão de iniciar a batalha */
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
