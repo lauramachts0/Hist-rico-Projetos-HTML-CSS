@@ -1,46 +1,116 @@
-body {
-    font-family: Arial, sans-serif;
-}
+p {
+            font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+        .navbar-brand{
+            font-size: 33px;
+            font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+        .foto-perfil {
+            height: 100%; 
+            width: auto;
+            width: 300px;
+            max-width: auto;
+            border-radius: 100%;
+        }
 
-.container {
-    width: 50%;
-    margin: 50px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
+        .icones {
+            padding-left: 5px;
+        }
+        .titulosBrancos {
+            text-decoration: underline;
+            text-underline-position: under;
+            padding-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: white;
+        }
+        .titulosVerdes {
+            text-decoration: underline;
+            text-underline-position: under;
+            padding-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #18bc9c
+        }
+        .paragrafoBrancos {
+            color: white !important;
+        }
+        .jumbotron {
+            margin-bottom: 0px;
+            margin-bottom: 0px;
+            border-radius: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
 
-h2 {
-    text-align: center;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
+        p {
+            color: black !important;
+        }
+        .corPrimaria {
+            background-color: #1d4d5c;
+            background: linear-gradient(120deg, #408ba1, #0f3944);
+        }
+        .nav-link.active {
+              color: #29aae1 !important;
+        }
+        .icon{
+            margin-bottom: 13px;
+            height: 40%; 
+            width: auto;
+            width: 40px;
+            max-width: auto;
+            border-radius: 100%;
+        }
+        h4{
+            color: rgb(236, 236, 236);
+            margin-left: 4;
+        }
+        .divider{
+            background-color:#18bc9c;
+            height: 3px;
+            margin: 0px 0;
+        }
+        .space1{
+            margin-bottom: 160px;
+        }
+        .space2{
+            margin-bottom: 210px;
+        }
+        .space3{
+            margin-bottom: 80px;
+        }
+        .space4{
+            margin-bottom: 100px;
+        }
+        .space5{
+            margin-bottom: 200px;
+        }
+        .space6{
+            margin-bottom: 150px;
+        }
+        .itemMenu {
+            color: white;
+        }
+        .nav-link {
+            transition: transform 0.001s ease;
+            margin-left: 5px;
+        }
+        .nav-link:hover {
+          transform: scale(1.1);
+        }
+        .icon-container img {
+            margin-right:  15px; 
+            margin-bottom: 15px;
+        }
+        .icon-container a:hover img {
+            transform: scale(1.1); 
+            transition: transform 0.1s ease; 
+        }
+        .expand-on-hover {
+            transition: transform 1s ease;
+            display: inline-block; 
+        }
+        .expand-on-hover:hover {
+            transform: scale(1.1);
+        }
